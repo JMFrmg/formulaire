@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8" />
+        
+        <link rel="stylesheet" href="style.css" />
+
+        <title>Google</title>
+
+    </head>
+
+
+    <body>
+
+      <div class="conteneur">
+
+<div class="divprincipalegauche">
+  <div class="titregauche">
+  <h1>Formulaire d'inscription</h1>
+  </div>
+  <p></p> 
+
+</div>
+
+<div class="divprincipaldroit">
+
+
+<p class=text1>Création d'un compte</p>
+
+<div class=fields>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  
+
+  <div class="field1">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Votre email..." %>
+  </div>
+
+  <div class="field2">
+    
+    <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder:"Votre pseudo..." %>
+  </div>
+
+  <div class="field3">
+    
+    
+    <%= f.password_field :password, autocomplete: "off", placeholder:"Votre mot de passe" %>
+  </div>
+
+  <div class="field4">
+    
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirmation du mot de passe" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Créer un compte" %>
+  </div>
+
+
+<% end %>
+
+</div>
+</div>
+
+<div class="bouton">
+<div class="textebouton">
+<%= link_to "Déjà inscrit?", new_user_session_path  %>
+</div>
+</div>
+
+</div>
+
+
+</body>
+
+</html>
